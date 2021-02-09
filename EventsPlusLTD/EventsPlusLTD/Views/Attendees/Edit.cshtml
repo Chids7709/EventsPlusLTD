@@ -1,0 +1,74 @@
+﻿@model EventsPlus_LTD.Models.Attendee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Attendee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="AttLastName" class="control-label"></label>
+                <input asp-for="AttLastName" class="form-control" />
+                <span asp-validation-for="AttLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttFirstName" class="control-label"></label>
+                <input asp-for="AttFirstName" class="form-control" />
+                <span asp-validation-for="AttFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttGender" class="control-label"></label>
+                <select asp-for="AttGender" class="form-control"></select>
+                <span asp-validation-for="AttGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttDoB" class="control-label"></label>
+                <input asp-for="AttDoB" class="form-control" />
+                <span asp-validation-for="AttDoB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttPhoneNumber" class="control-label"></label>
+                <input asp-for="AttPhoneNumber" class="form-control" />
+                <span asp-validation-for="AttPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttEmail" class="control-label"></label>
+                <input asp-for="AttEmail" class="form-control" />
+                <span asp-validation-for="AttEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttStreetAddress" class="control-label"></label>
+                <input asp-for="AttStreetAddress" class="form-control" />
+                <span asp-validation-for="AttStreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttCity" class="control-label"></label>
+                <input asp-for="AttCity" class="form-control" />
+                <span asp-validation-for="AttCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttPostcode" class="control-label"></label>
+                <input asp-for="AttPostcode" class="form-control" />
+                <span asp-validation-for="AttPostcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

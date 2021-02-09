@@ -1,0 +1,83 @@
+﻿@model IEnumerable<EventsPlus_LTD.Models.Organizer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgDoB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgStreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgPostcode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgDoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgStreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgPostcode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

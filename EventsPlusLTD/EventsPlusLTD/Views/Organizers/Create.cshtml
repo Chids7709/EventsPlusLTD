@@ -1,0 +1,73 @@
+﻿@model EventsPlus_LTD.Models.Organizer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Organizer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrgLastName" class="control-label"></label>
+                <input asp-for="OrgLastName" class="form-control" />
+                <span asp-validation-for="OrgLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgFirstName" class="control-label"></label>
+                <input asp-for="OrgFirstName" class="form-control" />
+                <span asp-validation-for="OrgFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgGender" class="control-label"></label>
+                <select asp-for="OrgGender" class="form-control"></select>
+                <span asp-validation-for="OrgGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgDoB" class="control-label"></label>
+                <input asp-for="OrgDoB" class="form-control" />
+                <span asp-validation-for="OrgDoB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgPhoneNumber" class="control-label"></label>
+                <input asp-for="OrgPhoneNumber" class="form-control" />
+                <span asp-validation-for="OrgPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgEmail" class="control-label"></label>
+                <input asp-for="OrgEmail" class="form-control" />
+                <span asp-validation-for="OrgEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgStreetAddress" class="control-label"></label>
+                <input asp-for="OrgStreetAddress" class="form-control" />
+                <span asp-validation-for="OrgStreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgCity" class="control-label"></label>
+                <input asp-for="OrgCity" class="form-control" />
+                <span asp-validation-for="OrgCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrgPostcode" class="control-label"></label>
+                <input asp-for="OrgPostcode" class="form-control" />
+                <span asp-validation-for="OrgPostcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

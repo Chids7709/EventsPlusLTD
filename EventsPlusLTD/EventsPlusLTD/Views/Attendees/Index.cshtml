@@ -1,0 +1,83 @@
+﻿@model IEnumerable<EventsPlus_LTD.Models.Attendee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AttLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttDoB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttPhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttStreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttPostcode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttDoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttPhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttStreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttPostcode)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .Cards {
+            width: 70%;
+            background-color: white;
+            border-radius: 5px;
+            margin: initial;
+        }
+
+        .Image img {
+            width: 40%;
+            float: right;
+            margin-left: 20px;
+
+        }
+
+        .Title {
+            text-align: center;
+        }
+
+        .Description {
+            text-align: center;
+            padding: 4px;
+        }
+    </style>
+ </head>
+<body>
+    <div class="text-left">
+        <h1 class="display-4"> Welcome</h1>
+        <p> Learn about <a href="https://docs.microsoft.com/aspnet/core"> building Web apps with ASP.NET Core</a> .</p>
+    </div>
+    <div style="display: flex; float:right; margin-left:20px;">
+        <img src="https://cdn.pixabay.com/photo/2020/10/29/13/34/table-5696243_1280.jpg" alt="Table" width="300" height="175" /><!--Embeds image into HTML page--><!--Specifies the path to the image-->
+    </div><br />
+    <div class="Cards">
+        <div class="Title">
+            <h2>Introduction</h2>
+        </div>
+        <div style="display: flex; float:left; margin-right:20px;">
+            <img src="https://cdn.pixabay.com/photo/2020/10/29/13/34/table-5696243_1280.jpg" alt="Table" width="300" height="175" /><!--Embeds image into HTML page--><!--Specifies the path to the image-->
+        </div><br />
+        <div class="Description">
+            <p>Welcome to the EventsPlus LTD website. This is a service that enables user to browse, create, promote and register for local events.</p>
+        </div>
+    </div>
+    <input type="button" value="Create Events" onclick="location.href='@Url.Action("Create", "Events")'" />
+</body>
+</html>
+

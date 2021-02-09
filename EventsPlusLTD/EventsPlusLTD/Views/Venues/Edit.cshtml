@@ -1,0 +1,69 @@
+﻿@model EventsPlus_LTD.Models.Venue
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Venue</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="StreetAddress" class="control-label"></label>
+                <input asp-for="StreetAddress" class="form-control" />
+                <span asp-validation-for="StreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Postcode" class="control-label"></label>
+                <input asp-for="Postcode" class="form-control" />
+                <span asp-validation-for="Postcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VenueCapacity" class="control-label"></label>
+                <input asp-for="VenueCapacity" class="form-control" />
+                <span asp-validation-for="VenueCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VenuePictureOne" class="control-label"></label>
+                <input asp-for="VenuePictureOne" class="form-control" />
+                <span asp-validation-for="VenuePictureOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VenuePictureTwo" class="control-label"></label>
+                <input asp-for="VenuePictureTwo" class="form-control" />
+                <span asp-validation-for="VenuePictureTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VenuePictureThree" class="control-label"></label>
+                <input asp-for="VenuePictureThree" class="form-control" />
+                <span asp-validation-for="VenuePictureThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EventID" class="control-label"></label>
+                <select asp-for="EventID" class="form-control" asp-items="ViewBag.EventID"></select>
+                <span asp-validation-for="EventID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
